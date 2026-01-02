@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service                                                             
+metadata:                                                                 
+  name: jonas-argcocd-demo
+  labels:
+    app: jonas-argocd-demo
+spec:
+  type: ClusterIP
+  ports:
+  - port: 80
+    targetPort: 5000
+    protocol: TCP
+  selector:
+    app: jonas-argocd-demo

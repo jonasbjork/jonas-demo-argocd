@@ -1,0 +1,11 @@
+apiVersion: route.openshift.io/v1                                         
+kind: Route                                                               
+metadata:                                                                 
+  name: jonas-argocd-demo                                                        
+  labels:                                                                 
+    app: jonas-argocd-demo                                                       
+spec:                                                                     
+  to:                                                                     
+    kind: Service                                                         
+    name: jonas-argocd-demo                                                      
+    weight: 100
